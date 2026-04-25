@@ -1,2 +1,5 @@
-# rag-wikipedia
-RAG pipeline using Wikipedia dataset with SBERT retriever and Qwen LLM
+# RAG-Wikipedia project
+This project implements a basic Retrieval-Augmented Generator (RAG) pipeline using the Wikipedia database.
+
+## Steps:
+- Step 1: Repository setup
