@@ -1,4 +1,4 @@
-### Requirements for this project:
+Requirements for this project:
 - datasets
 - transformers
 - sentence-transformers
