@@ -42,3 +42,10 @@ This project implements a basic Retrieval-Augmented Generator (RAG) pipeline usi
     * Computed similarity using cosine similarity
     * Ranked documents using NumPy sorting
     * Returned top-k results
+   
+- Step 5: Prompt construction:
+  - Implementation (src/prompt.py)
+    * A prompt builder function takes:
+      - user question
+      - Retrieved documents (output from the retriever (Step 4))
+    * It then formats them into a structured prompt.  
