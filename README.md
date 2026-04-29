@@ -48,4 +48,12 @@ This project implements a basic Retrieval-Augmented Generator (RAG) pipeline usi
     * A prompt builder function takes:
       - user question
       - Retrieved documents (output from the retriever (Step 4))
-    * It then formats them into a structured prompt.  
+    * It then formats them into a structured prompt.
+   
+- Step 6: LLM Generation
+   * Load pretrained LLM model
+   * Initialize tokenizer and model
+   * Convert prompt to tokens
+   * Generate response from the model
+   * Decode tokens to text
+   * Output the final generated answer
