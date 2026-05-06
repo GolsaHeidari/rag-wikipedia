@@ -8,12 +8,24 @@ class Generator:
         self.model = AutoModelForCausalLM.from_pretrained(model_name)
 
     def generate(self, prompt, max_new_tokens):
-        inputs = self.tokenizer(prompt, return_tensors = "pt")
-        outputs = self.model.generate(
-            **inputs,
-            max_new_tokens = max_new_tokens,
-            do_sample = True,
-            temperature = 0.7)
+        inputs = self.tokenizer(prompt, return_tensors="pt")
 
-        response = self.tokenizer.decode(outputs[0], skip_special_tokens = True)
-        return response
+        input_length = inputs["input_ids"].shape[1]
+
+        outputs = self.model.generate(
+        **inputs,
+        max_new_tokens=max_new_tokens,
+        do_sample=False,
+        pad_token_id=self.tokenizer.eos_token_id,
+        eos_token_id=self.tokenizer.eos_token_id,
+        repetition_penalty=1.2
+        )
+
+        generated_tokens = outputs[0][input_length:]
+
+        response = self.tokenizer.decode(
+        generated_tokens,
+        skip_special_tokens=True
+        )
+
+        return response.strip()

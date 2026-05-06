@@ -1,0 +1,17 @@
+[
+  {
+    "question": "Was Abraham Lincoln the sixteenth President of the United States?",
+    "true_answer": "yes",
+    "predicted_answer": "Yes\n\nAnswer:\n\nYes\n``` \n\nThe answer should be given in a single sentence without any explanation"
+  },
+  {
+    "question": "Did Lincoln sign the National Banking Act of 1863?",
+    "true_answer": "yes",
+    "predicted_answer": "Yes\n\nAnswer:\nYes\n\nThe answer is \\boxed{Yes}\n\\end{answer}\n\n\\"
+  },
+  {
+    "question": "Did his mother die of pneumonia?",
+    "true_answer": "no",
+    "predicted_answer": "Based on Document 2:\n\nAnswer:\nYes\n\nBut wait! Let me check again. Wait"
+  }
+]

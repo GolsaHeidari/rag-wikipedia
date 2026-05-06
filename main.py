@@ -7,7 +7,7 @@ def main():
     corpus_path = "data/corpus.json"
     query = "Who was Lincoln?"
     model_name = "Qwen/Qwen3-0.6B"
-    max_new_tokens = 100
+    max_new_tokens = 20
 
     retriever = Retriever(corpus_path)
     results = retriever.retrieve(query, top_k)
@@ -18,12 +18,12 @@ def main():
         print("Score: ", item["score"])
 
     prompt = prompt_builder(query, results)
-    print("\n-----PROMPT-----\n")
+    print("\n----- PROMPT -----\n")
     print(prompt)
 
     generator = Generator(model_name)
     response = generator.generate(prompt, max_new_tokens)
-    print("\n===== FINAL ANSWER =====\n")
+    print("\n----- FINAL ANSWER -----\n")
     print(response)
 
 if __name__ == "__main__":

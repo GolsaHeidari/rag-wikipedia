@@ -1,7 +1,6 @@
-Requirements for this project:
-- datasets
-- transformers
-- sentence-transformers
-- torch
-- numpy
-- scikit-learn
+torch
+numpy
+datasets
+scikit-learn
+transformers
+sentence-transformers
