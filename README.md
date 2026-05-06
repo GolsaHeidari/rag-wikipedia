@@ -57,3 +57,15 @@ This project implements a basic Retrieval-Augmented Generator (RAG) pipeline usi
    * Generate response from the model
    * Decode tokens to text
    * Output the final generated answer
+ 
+- Step 7: Evaluation Pipeline
+    - Generate predicted answer:
+      * Load question from dataset
+      * Retrieve top-k relevant documents using retriever (from data/corpus.json)
+      * Build prompt using retrieved context
+      * Generate answer using LLM (Qwen/Qwen3-0.6B)
+      * Clean the predicted answer
+      * Store results for analysis
+   - Evaluation
+      * Compare the true_answer with predicated_answer
+      * Calculate Exact Match Accuracy
