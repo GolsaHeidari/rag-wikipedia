@@ -66,6 +66,17 @@ This project implements a basic Retrieval-Augmented Generator (RAG) pipeline usi
       * Generate answer using LLM (Qwen/Qwen3-0.6B)
       * Clean the predicted answer
       * Store results for analysis
-   - Evaluation
+   - Evaluation Metrics:
       * Compare the true_answer with predicated_answer
-      * Calculate Exact Match Accuracy
+      * Calculate Semantic Similarity and Average Semantic Similarity:
+        - Computed using SentenceTransformers embeddings
+        - Measures semantic closeness between predicted and true answers
+        - Average semantic similarity is reported across all samples
+      * Calculate ROUGE-L and Average ROUGE-L:
+        - Measures longest common subsequence overlap
+        - Evaluates lexical similarity between answers
+        - Average ROUGE-L score is reported 
+      * Calculate BLEU and Average BLEU:
+        - Measures n-gram overlap between generated and reference answers
+        - Uses smoothing for short-answer stability
+        - Average BLEU score is reported
