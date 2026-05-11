@@ -1,6 +1,8 @@
 torch
 numpy
+nltk
 datasets
+rouge-score
 scikit-learn
 transformers
 sentence-transformers

@@ -2,16 +2,25 @@
   {
     "question": "Was Abraham Lincoln the sixteenth President of the United States?",
     "true_answer": "yes",
-    "predicted_answer": "Yes\n\nAnswer:\n\nYes\n``` \n\nThe answer should be given in a single sentence without any explanation"
+    "predicted_answer": "Yes\n\nAnswer:\n\nYes\n``` \n\nThe answer should be given in a single sentence without any explanation",
+    "similarity": 0.3030247092247009,
+    "rougeL": 0.125,
+    "bleu_score": 0.014238348381961592
   },
   {
     "question": "Did Lincoln sign the National Banking Act of 1863?",
     "true_answer": "yes",
-    "predicted_answer": "Yes\n\nAnswer:\nYes\n\nThe answer is \\boxed{Yes}\n\\end{answer}\n\n\\"
+    "predicted_answer": "Yes\n\nAnswer:\nYes\n\nThe answer is \\boxed{Yes}\n\\end{answer}\n\n\\",
+    "similarity": 0.3375580310821533,
+    "rougeL": 0.18181818181818182,
+    "bleu_score": 0.01571523700545522
   },
   {
     "question": "Did his mother die of pneumonia?",
     "true_answer": "no",
-    "predicted_answer": "Based on Document 2:\n\nAnswer:\nYes\n\nBut wait! Let me check again. Wait"
+    "predicted_answer": "Based on Document 2:\n\nAnswer:\nYes\n\nBut wait! Let me check again. Wait",
+    "similarity": 0.1695374697446823,
+    "rougeL": 0.0,
+    "bleu_score": 0
   }
 ]
