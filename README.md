@@ -13,6 +13,7 @@ This project implements a basic Retrieval-Augmented Generator (RAG) pipeline usi
       - main.py → entry point of the application
       - run_dataset.py → script for dataset preparation
       - requirements.txt → dependencies
+      - run_evaluation.py → Evaluation pipeline
       - README.md → project documentation
         
 - Step 2: Dataset download and setup:
@@ -61,13 +62,13 @@ This project implements a basic Retrieval-Augmented Generator (RAG) pipeline usi
 - Step 7: Evaluation Pipeline
     - Generate predicted answer:
       * Load question from dataset
-      * Retrieve top-k relevant documents using retriever (from data/corpus.json)
+      * Retrieve the top-k most relevant documents (from data/corpus.json)
       * Build prompt using retrieved context
       * Generate answer using LLM (Qwen/Qwen3-0.6B)
       * Clean the predicted answer
       * Store results for analysis
    - Evaluation Metrics:
-      * Compare the true_answer with predicated_answer
+      * Compare the true_answer with predicted_answer
       * Calculate Semantic Similarity and Average Semantic Similarity:
         - Computed using SentenceTransformers embeddings
         - Measures semantic closeness between predicted and true answers
