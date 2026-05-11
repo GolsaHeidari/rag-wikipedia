@@ -1,10 +1,77 @@
-# RAG-Wikipedia project
-This project implements a basic Retrieval-Augmented Generator (RAG) pipeline using a Wikipedia database.
-- Dataset: rag-mini-wikipedia
-- Retriever model: all-MiniLM-L6-v2
-- LLM: Qwen3-0.6B
+# 📚 RAG-Wikipedia Project
+This project implements a simple **Retrieval-Augmented Generation (RAG)** pipeline using a Wikipedia-based dataset.  
+It combines document retrieval with a large language model to answer questions using relevant context.
 
-## Steps:
+## 🚀 Overview
+The system follows a standard RAG pipeline:
+1. Load a question
+2. Retrieve relevant Wikipedia passages
+3. Build a prompt with retrieved context
+4. Generate an answer using an LLM
+5. Evaluate results using multiple metrics
+
+## 🤖 Models Used
+
+- **Retriever:** `all-MiniLM-L6-v2` (Sentence Transformers)
+- **Generator (LLM):** `Qwen/Qwen3-0.6B`
+- **Dataset:** `rag-datasets/rag-mini-wikipedia`
+
+## 📁 Project Structure
+
+```text
+rag-wikipedia/
+├── src/                  # Core source code (retriever, generator, prompt builder)
+├── data/                 # Dataset files (corpus.json, qa.json, results.json)
+├── scripts/              # Evaluation and experiments
+├── run_dataset.py        # Dataset preparation script
+├── run_evaluation.py     # Evaluation pipeline (RAG + metrics)
+├── main.py               # Simple inference entry point
+├── requirements.txt      # Dependencies
+└── README.md             # Project documentation
+```
+
+## ⚙️ Installation
+
+```bash
+git clone <your-repo-url>
+cd rag-wikipedia
+pip install -r requirements.txt
+```
+
+## ▶️ Usage
+1. Run RAG inference
+python main.py
+2. Run dataset preparation
+python run_dataset.py
+3. Run evaluation pipeline
+python run_evaluation.py
+
+## 📊 Evaluation Metrics
+The system evaluates generated answers using:
+Semantic Similarity
+SentenceTransformer embeddings
+Measures meaning similarity
+ROUGE-L
+Longest common subsequence overlap
+Measures lexical similarity
+BLEU Score
+N-gram overlap metric
+Includes smoothing for short answers
+
+## 📌 Example Pipeline
+Question → Retriever → Context → Prompt → LLM → Answer
+
+## 📈 Results
+The evaluation script outputs:
+Per-sample scores
+Average semantic similarity
+Average ROUGE-L score
+Average BLEU score
+
+## 📜 License
+This project is for educational purposes.
+
+## 🪜 Steps:
 - Step 1: Repository setup
     * Defined separate folders for:
       - data/ → storing datasets (corpus and QA files)
